@@ -104,7 +104,7 @@ public class Main {
 	private static int[] merge(int[] left, int[] right, int middle, int oddShift) {
 		final int [] result = new int[left.length * 2 - oddShift] ;
 		int i =0 ,j = 0, k = 0;
-		while ( i < middle || j < middle ) {
+		while ( i < middle && j < middle ) {
 			if (i < middle && j < middle){
 				if (left[i] < right[j]){
 					result[k]=left[i];
@@ -115,7 +115,6 @@ public class Main {
 					j++;
 				}
 			}
-			
 			k++;
 		}
 		
